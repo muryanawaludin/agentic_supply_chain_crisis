@@ -1,51 +1,64 @@
-# 👥 Autonomous Software Engineering Squad: Multi-Agent System (MAS) Platform
+# 🚢 Supply Chain Crisis Command Center: Hierarchical Multi-Agent Architecture
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://agentic-software-squad.streamlit.app)
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/muryanawaludin/agentic_software_squad.git)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://agentic-supply-chain-crisis.streamlit.app)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue?logo=github)](https://github.com/muryanawaludin/agentic_supply_chain_crisis.git)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-brightgreen?logo=python)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-Implementasi platform **Sistem Multi-Agen (MAS)** otonom untuk simulasi dan automasi rekayasa perangkat lunak perusahaan. Memadukan pembagian peran fungsional terdistribusi, protokol komunikasi terstruktur berbasis **FIPA-ACL**, arsitektur memori bersama (*Blackboard System*), serta **Protokol Konsensus Semantik** dengan hak veto pengujian.
+Platform **Sistem Multi-Agen Hierarkis (Hierarchical Multi-Agent System / HMAS)** untuk automasi komando krisis logistik dan ketahanan rantai pasok global. Sistem menerapkan pola **Supervisor-Worker**, formalisasi **Semi-Markov Decision Process (SMDP)**, serta **Options Framework** untuk memitigasi disrupsi pengiriman kargo lintas benua secara otonom dan terukur.
 
 ---
 
 ## 🌐 Demo Aplikasi Langsung
 
-Aplikasi ini dapat diuji secara interaktif tanpa instalasi lokal melalui peramban:  
-👉 **[Buka Demo Aplikasi Streamlit](https://agentic-software-squad.streamlit.app)**  
-*(Alternatif: [agentic_software_squad.streamlit.app](https://agentic_software_squad.streamlit.app))*
+Aplikasi dapat dijalankan langsung di peramban tanpa instalasi lokal:  
+👉 **[Buka Demo Aplikasi Streamlit](https://agentic-supply-chain-crisis.streamlit.app)**  
+*(Tautan alternatif: [agentic_supply_chain_crisis.streamlit.app](https://agentic_supply_chain_crisis.streamlit.app))*
 
 ---
 
-## 🎯 Peran Skuad & Arsitektur Kognitif
+## 🎯 Arsitektur Kognitif & Struktur Komando
 
-Sistem mengorkestrasi 4 agen spesialis yang berkolaborasi menyelesaikan tiket pengembangan dari dataset Kaggle:
+Platform memisahkan secara tegas antara **penalaran strategis tingkat tinggi (*strategic reasoning*)** dan **eksekusi taktis tertutup (*domain-specific execution*)**:
 
-| Peran Agen | Tanggung Jawab Operasional | Artefak Keluaran |
+| Komponen Agen | Peran & Tanggung Jawab | Output Analisis |
 | :--- | :--- | :--- |
-| **Analyst Agent** | Dekomposisi tugas & analisis kebutuhan | *User Story* & *Acceptance Criteria* formal |
-| **Programmer Agent** | Perancangan arsitektur & sintesis logika | Kode modul Python deterministik |
-| **Reviewer Agent** | Audit keamanan kode & pemeriksaan *code smell* | Skor audit keamanan & catatan kelemahan |
-| **Tester Agent** | Eksekusi unit test sintetis & kasus batas | Matriks uji kasus batas (*Passed/Failed*) |
+| **Supervisor Agent** *(Crisis Commander)* | Triage insiden kargo, ekstraksi profil sensitivitas produk, agregasi multi-kriteria SMDP, dan penetapan putusan mitigasi. | Putusan Mitigasi Final (*Standard / Re-route / Expedited Air*), Estimasi Delay Diselamatkan, & Penyesuaian Biaya. |
+| **Geopolitical Risk Specialist** *(Worker 1)* | Monitoring stabilitas koridor maritim (*Suez, Pacific, Atlantic, dll.*) dan evaluasi titik sempit maritim (*chokepoints*). | Status Koridor (*Safe / Caution / Blocked*), Indeks Risiko Geopolitik, & Rekomendasi Rute Maritim. |
+| **Meteorology & Port Specialist** *(Worker 2)* | Deteksi kegentingan cuaca oseanografi (*badai/siklon*) dan analisis kepadatan sandar terminal kargo. | Status Atmosferik, Indeks Keparahan Cuaca, & Proyeksi *Port Dwell Days*. |
+| **Freight Economics Specialist** *(Worker 3)* | Analisis kelayakan kapasitas pesawat kargo terhadap berat pesanan dan kalkulasi lonjakan tarif moda kargo. | Kelayakan Fisik Udara (*Air Feasibility*), Multiplikasi Biaya, & Estimasi Biaya Alternatif. |
 
 ---
 
-## 📊 Sumber Data Penelitian
+## 📊 Dataset Penelitian
 
-Dataset yang digunakan bersumber dari repositori publik Kaggle:  
-**[Software Development Employee Project Dataset](https://www.kaggle.com/datasets/firozfau/software-development-employee-project-dataset)**  
-- `employees.csv`: 2.500 profil karyawan dengan matriks keahlian, beban kerja, dan skor kinerja historis.
-- `tasks.csv`: 15.000 catatan tugas perangkat lunak lintas kompleksitas (*Low, Medium, High*).
-- `projects.csv`: 900 proyek enterprise dengan dependensi tumpukan teknologi modern.
+Aplikasi menggunakan dataset logistik global publik dari Kaggle:  
+**[Global Supply Chain Disruption and Resilience Dataset](https://www.kaggle.com/datasets/bertnardomariouskono/global-supply-chain-disruption-and-resilience)**  
+- **Volume Data:** 10.000 transaksi pengiriman kargo internasional lintas benua.
+- **Fitur Kunci:** `Order_ID`, `Route_Type`, `Product_Category`, `Transportation_Mode`, `Delay_Days`, `Disruption_Event`, `Geopolitical_Risk_Index`, `Weather_Severity_Index`, `Shipping_Cost_USD`, `Order_Weight_Kg`, dan `Mitigation_Action_Taken`.
 
 ---
 
 ## 🚀 Panduan Menjalankan Secara Lokal
 
-1. **Kloning Repositori:**
+1. **Clone Repositori:**
    ```bash
-   git clone [https://github.com/muryanawaludin/agentic_software_squad.git](https://github.com/muryanawaludin/agentic_software_squad.git)
-   cd agentic_software_squad
+   git clone [https://github.com/muryanawaludin/agentic_supply_chain_crisis.git](https://github.com/muryanawaludin/agentic_supply_chain_crisis.git)
+   cd agentic_supply_chain_crisis
+
+   agentic_supply_chain_crisis/
+├── data/
+│   └── global_supply_chain_disruption_v1.csv   # Dataset 10.000 pesanan kargo
+├── agent/
+│   ├── __init__.py
+│   ├── schema.py                                # Skema Pydantic status kargo & asesmen
+│   ├── workers.py                               # 3 Worker: Geopolitik, Cuaca, & Ekonomi
+│   └── supervisor.py                            # Supervisor: Sintesis multi-kriteria SMDP
+├── config.py                                    # Ambang batas risiko & parameter sistem
+├── requirements.txt                             # Dependensi pustaka Python
+├── app.py                                       # Antarmuka web interaktif Streamlit
+├── .gitignore                                   # Filter berkas lingkungan & cache
+└── README.md                                    # Dokumentasi resmi proyek
 
 👨‍💻 Penulis & Peneliti
 Muryan Awaludin, S.Kom., M.Kom.
@@ -54,4 +67,7 @@ Dosen & Peneliti Kecerdasan Buatan / Rekayasa Perangkat Lunak
 
 GitHub: @muryanawaludin
 
+📄 Hak Cipta & Lisensi
 Hak Cipta © 2026 Muryan Awaludin. Seluruh hak cipta dilindungi undang-undang.
+
+Proyek ini didistribusikan di bawah lisensi MIT License.
